@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.dynamicDataSource.dao.DynamicMapper">
+    <select id="getUserInfo" parameterType="string" resultType="com.app.dynamicDataSource.po.User">
+        select id,username from ums_admin where id = #{id}
+    </select>
+    <select id="getTestInfo" parameterType="string" resultType="com.app.dynamicDataSource.po.User">
+        select id,username from userinfo where id = #{id}
+    </select>
+</mapper>
